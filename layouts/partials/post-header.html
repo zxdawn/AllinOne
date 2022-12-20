@@ -1,0 +1,12 @@
+<div class="post-header text-center" >
+  <ul class="post-meta li-x">
+    {{ partial "post-categories.html" . }}
+  </ul>
+  {{ partial "post-title.html" . }}
+
+  {{ with .Params.img }}
+    <div class="view">
+      <img src="{{ . | absURL }}" />
+    </div>
+  {{ end }}
+</div>

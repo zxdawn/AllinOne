@@ -1,0 +1,31 @@
+<div class="post-wrapper white-bg post-card">
+  <a href="{{ .Permalink }}">
+    <div class="post-header text-center">
+      {{ partial "post-title.html" . }}
+    </div>
+    {{ with .Params.img }}
+    
+      <div class="view">
+        <img src="{{ . | absURL }}" />
+      </div>
+    {{ end }}
+
+    {{ if not .Params.noSummary }}
+      {{ if .Params.summary }}
+        {{ .Params.summary| plainify | htmlUnescape  }}
+      {{ else }}
+        {{ .Summary | plainify | htmlUnescape }}......
+      {{ end }}
+    {{ end }}
+  </a>
+  <div class="post-meta li-x mt-2 div-x">
+    <div>
+      {{ partial "post-categories.html" . }}
+    </div>
+    <div>
+      {{ if .Params.tags }}
+        {{ partial "tags.html" . }}
+      {{ end }}
+    </div>
+  </div>
+</div>

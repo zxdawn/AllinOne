@@ -1,0 +1,35 @@
+---
+- id: home
+  translation: "Home"
+
+- id: latestPosts
+  translation: "Latest Posts"
+
+- id: pageNotFound
+  translation: "Oops! Page Not Found..."
+
+- id: readingTime
+  translation: "{{ .Count }} minute read"
+
+- id: return
+  translation: "Return"
+
+- id: previousPost
+  translation: "Previous"
+
+- id: nextPost
+  translation: "Next"
+
+- id: postCount
+  translation:
+    one: "One post"
+    other: "{{ .Count }} posts"
+
+- id: sidebarCategories
+  translation: "Categories"
+
+- id: sidebarFeaturedTags
+  translation: "Featured Tags"
+
+- id: sidebarRecommendedSeries
+  translation: "Recommended Series"

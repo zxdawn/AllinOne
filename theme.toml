@@ -1,0 +1,13 @@
+customdemo = "https://orianna-zzo.github.io/AllinOne-html/"
+description = "All you need for a blog in one template."
+features = ["full image carousel", "hierachical toc", "katex"]
+homepage = "https://github.com/orianna-zzo/AllinOne"
+license = "MIT"
+licenselink = "https://github.com/orianna-zzo/AllinOne/blob/master/LICENSE"
+min_version = 0.74
+name = "AllinOne"
+tags = ["blog", "personal"]
+
+[author]
+homepage = "https://orianna-zzo.github.io/"
+name = "ZHENG Zi'ou"
