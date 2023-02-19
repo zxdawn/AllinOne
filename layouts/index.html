@@ -27,14 +27,15 @@
       <!-- Post list -->
       <!-- <div class="pt-5 px-5 mx-5"> -->
       <div class="col-md-9 mt-3">  
-        {{ $totalpostscount := len (.Site.RegularPages) }}
+        {{ $mainpages := where .Site.RegularPages "Section" "not in" "about"}}
+        {{ $totalpostscount := len ($mainpages) }}
         {{ $latestpostscount := .Site.Params.latestpostscount | default $totalpostscount }}
         {{ if gt $latestpostscount 0 }}
           <!-- <div class='post-heading'>
             {{ i18n "latestPosts" }}
           </div> -->
           <div>
-              {{ range (first $latestpostscount .Site.RegularPages.ByPublishDate.Reverse ) }}
+              {{ range (first $latestpostscount $mainpages.ByPublishDate.Reverse ) }}
                   {{ partial "post-card.html" . }}
               {{ end }}
               
